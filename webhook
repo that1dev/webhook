@@ -1,0 +1,14 @@
+const webhook = require("webhook-discord");
+
+const Hook = new webhook.Webhook("WEBHOOK URL");
+
+const msg = new webhook.MessageBuilder()
+                .setName("Username")
+                .setColor("#aabbcc")
+                .setText("This is my webhook!")
+                .addField("This", "is")
+                .addField("my", "webhook!")
+                .setImage("Image url")
+                .setTime();
+
+Hook.send(msg);
